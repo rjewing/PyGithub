@@ -80,6 +80,13 @@ class AuthenticatedUser(CompletableGithubObject):
         allow_merge_commit: Union[bool, _NotSetType] = ...,
         allow_rebase_merge: Union[bool, _NotSetType] = ...,
     ) -> Repository: ...
+    def create_repo_from_template(
+        self,
+        name,
+        repo,
+        description: Union[str, _NotSetType] = ...,
+        private: Union[bool, _NotSetType] = ...,
+    ): Repository: ...
     @property
     def created_at(self) -> datetime: ...
     @property
